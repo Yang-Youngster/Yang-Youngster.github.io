@@ -10,7 +10,7 @@ $(function () {
             $(this).removeClass(animateClass);
         });
     };
-    articleCardHover();
+    articleCardHover(); //调用Hover
 
     /*菜单切换*/
     $('.sidenav').sidenav();
@@ -106,9 +106,16 @@ $(function () {
             subHtmlSelectorRelative: true
         });
 
+
+
+
+
         $(document).find('img[data-original]').each(function(){
             $(this).parent().attr("href", $(this).attr("data-original"));
         });
+
+
+
 
         // progress bar init
         const progressElement = window.document.querySelector('.progress-bar');
@@ -151,7 +158,9 @@ $(function () {
         }
     }
 
-    	
+
+    // 二级菜单
+
 	$(".nav-menu>li").hover(function(){
 		$(this).children('ul').stop(true,true).show();
 		 $(this).addClass('nav-show').siblings('li').removeClass('nav-show');
